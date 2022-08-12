@@ -1,0 +1,50 @@
+<div class="card" style="height: 100%">
+    <div class="card-body">
+        <p-carousel  [value]="products" styleClass="custom-carousel" [numVisible]="5" [numScroll]="1" [circular]="true" [autoplayInterval]="1500" [responsiveOptions]="responsiveOptions">
+            <ng-template pTemplate="header">
+                <h5 style="text-align: center;">Glimps of Puja</h5>
+            </ng-template>
+            <ng-template let-product pTemplate="item">
+                <div class="product-item">
+                    <div class="product-item-content">
+                        <div class="mb-3 imageBox">
+                            <img src="../../assets/images/{{product.image}}" [alt]="product.name" class="product-image" />
+                        </div>
+                        <div>
+                            <h4 class="mb-1">{{product.name}}</h4>
+                            <!-- <h6 class="mt-0 mb-3">${{product.price}}</h6> -->
+                            <!-- <span [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span> -->
+                            <div class="car-buttons mt-5">
+                                <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                                <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                                <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+    
+</div>
+<div class="card">
+    <div class="card-header">
+        Details About Puja
+    </div>
+    <div class="card-body">
+        <p>With a Parent Element With a Static Height
+            When your element is nested inside another element, the browser will use the parent element's height to calculate a value for 100%. So, if your element is inside another element that has a height of 100px, and you set the child element's height to 100%. The child element will be 100px high.</p>
+            <div class="row">
+                <div class="col-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/AfGXWKeXEec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class = "col-6"><b>some discription about video</b></div>
+            </div>
+            
+    </div>
+
+    
+    <div class="card-footer"></div>
+</div>
+
+
