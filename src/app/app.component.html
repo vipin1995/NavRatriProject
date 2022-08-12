@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #a4fafa;">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbarToggler3"
-      aria-controls="myNavbarToggler3" aria-expanded="false" aria-label="Toggle navigation">
+      aria-controls="myNavbarToggler3" (click)="isShown = !isShown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="#">WebsiteName + Logo</a>
-  <div class="collapse navbar-collapse" id="myNavbarToggler">
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': isShown }" id="myNavbarToggler">
       <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link active" routerLinkActive="active" href="#">Home</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" routerLink="/aboutUs" routerLinkActive="active">About Us</a>
